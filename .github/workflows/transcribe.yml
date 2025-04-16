@@ -30,13 +30,14 @@ jobs:
         python run.py "${{ github.event.inputs.youtube_url }}"
 
     - name: Upload title
-      uses: actions/upload-artifact@v3.1.2
-      with:
+        uses: actions/upload-artifact@8d89c40d9c1c1f203d5bcf274fc02d78ebd3a63a
+        with:
         name: title
         path: title.txt
-
+  
     - name: Upload script
-      uses: actions/upload-artifact@v3.1.2
-      with:
+        uses: actions/upload-artifact@8d89c40d9c1c1f203d5bcf274fc02d78ebd3a63a
+        with:
         name: script
         path: script.txt
+  
