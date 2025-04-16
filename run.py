@@ -24,10 +24,12 @@ def transcribe(path="input.mp4", model_size="base"):
 if __name__ == "__main__":
     url = sys.argv[1]
     title = get_video_title(url)
+    print("🔹VIDEO_TITLE_START🔹")
+    print(title.strip())
+    print("🔹VIDEO_TITLE_END🔹")
+
     download_audio(url)
     script = transcribe()
-
-    with open("title.txt", "w", encoding="utf-8") as f:
-        f.write(title)
-    with open("script.txt", "w", encoding="utf-8") as f:
-        f.write(script)
+    print("🔸SCRIPT_START🔸")
+    print(script.strip())
+    print("🔸SCRIPT_END🔸")
