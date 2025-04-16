@@ -24,6 +24,10 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
+        
+    - name: Create cookies.txt from secret
+      run: |
+        echo "${{ secrets.YOUTUBE_COOKIES }}" > cookies.txt
 
     - name: Run transcription
       run: |
