@@ -35,3 +35,13 @@ jobs:
     - name: Run transcription
       run: |
         python run.py "${{ github.event.inputs.youtube_url }}"
+
+
+    - name: Upload Whisper output
+      uses: actions/upload-artifact@v3
+      with:
+        name: whisper-output
+        path: |
+          title.txt
+          script.txt
+      

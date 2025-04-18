@@ -46,3 +46,9 @@ if __name__ == "__main__":
     print("🔸SCRIPT_START🔸")
     print(script.strip())
     print("🔸SCRIPT_END🔸")
+    
+with open("title.txt", "w", encoding="utf-8") as f:
+    f.write(title.strip())
+
+with open("script.txt", "w", encoding="utf-8") as f:
+    f.write(script.strip())
